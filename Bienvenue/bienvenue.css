@@ -1,0 +1,129 @@
+/* --------- GLOBAL : Style général du body --------- */
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+    font-family: 'Segoe UI', sans-serif; /* Police lisible et moderne */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/Fond.jpg'); /* Image de fond avec filtre foncé */
+    background-size: cover; /* L'image couvre tout l'écran */
+    background-position: center; /* L'image est centrée */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    position: relative; /* Pour positionner les enfants relativement */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrage horizontal du texte */
+    overflow: hidden; /* Cache tout débordement */
+}
+
+/* --------- Z-INDEX : Élève tout le contenu au-dessus de l'overlay --------- */
+body > * {
+    position: relative; /* Position relative pour le z-index */
+    z-index: 1; /* Met le contenu au-dessus de l'image de fond */
+}
+
+/* --------- TOP BANNER : Bandeau fixe en haut --------- */
+.top-banner {
+    position: fixed; /* Fixe le bandeau même au scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    height: 60px; /* Hauteur du bandeau */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    z-index: 1000; /* Toujours visible au-dessus du reste */
+    display: flex; /* Utilise Flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+}
+
+/* --------- NAVIGATION : Liste horizontale --------- */
+.nav-menu ul {
+    list-style: none; /* Supprime les puces de liste */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Affiche les éléments en ligne */
+    gap: 30px; /* Espacement entre les éléments */
+    align-items: center; /* Centre verticalement */
+}
+
+/* --------- LIENS DE NAVIGATION : Style de base --------- */
+.nav-menu ul li a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: white; /* Texte blanc */
+    font-weight: bold; /* En gras */
+    font-size: 16px; /* Taille du texte */
+    transition: color 0.3s ease; /* Transition douce */
+}
+
+/* --------- EFFET AU SURVOL : Changement de couleur --------- */
+.nav-menu ul li a:hover {
+    color: #ffcc00; /* Couleur jaune au survol */
+}
+
+/* --------- BOUTON RETOUR : Aligné tout à gauche dans la nav --------- */
+.nav-menu ul li:first-child {
+    margin-right: auto; /* Pousse les autres éléments à droite */
+}
+
+.back-button {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    color: white;
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 8px 16px; /* Espace intérieur */
+    font-size: 16px;
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Effets au survol */
+    width: auto; /* Taille ajustée au contenu */
+}
+
+.back-button:hover {
+    background-color: white; /* Fond blanc */
+    color: black; /* Texte noir */
+}
+
+/* --------- ESPACE POUR LE CONTENU : Conteneur principal sous la navbar --------- */
+.content {
+    margin-top: 80px; /* Décale le contenu sous la nav */
+    color: white; /* Assure lisibilité sur fond foncé */
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+
+/* --------- STYLE H3 : Ajustement du texte pour éviter l'effet blanc derrière --------- */
+.content h3 {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour lisibilité */
+    padding: 10px; /* Espace autour du texte */
+    border-radius: 5px; /* Coins arrondis légers */
+    color: white; /* Texte blanc */
+    border-top-width: 0px;
+    margin-top: 133px; /* Espace au-dessus du titre */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    border-left-width: 0px;
+    font-size: 25px;
+    border-radius: 20px; /* Coins encore plus arrondis */
+}
+
+.contenu{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+
+}
+
+.JS{
+
+    border-radius: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.texte{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 500px;
+    padding: 20px;
+    font-size: 20px;
+}

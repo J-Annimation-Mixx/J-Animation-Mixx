@@ -1,0 +1,110 @@
+/* --------- GLOBAL : Style général de la page --------- */
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    font-family: 'Segoe UI', sans-serif; /* Police principale */
+    background-image: url('../images/Fond.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    position: relative; /* Nécessaire pour positionner les éléments enfants */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centre le texte horizontalement */
+    overflow: hidden; /* Masque les débordements */
+  }
+  
+  /* --------- OVERLAY : Assombrit l'arrière-plan --------- */
+  .overlay {
+    position: absolute; /* Positionne par rapport au body */
+    top: 0; /* En haut */
+    left: 0; /* À gauche */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    background-color: rgba(0, 0, 0, 0.4); /* Noir semi-transparent */
+    z-index: 1; /* Derrière le contenu */
+  }
+  
+  /* --------- CONTENT : Centre les éléments au milieu --------- */
+  .content {
+    position: absolute; /* Position absolue */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste pour un vrai centrage */
+    z-index: 2; /* Devant l’overlay */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Colonne verticale */
+    align-items: center; /* Centre horizontalement les enfants */
+    justify-content: center; /* Centre verticalement les enfants */
+  }
+  
+  /* --------- LOGO CENTRAL : Encadre et anime le logo --------- */
+  .logo-wrapper {
+    position: absolute; /* Position au centre */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Corrige le centrage */
+    width: 550px; /* Largeur du cercle */
+    height: 400px; /* Hauteur du cercle */
+    overflow: hidden; /* Cache ce qui dépasse */
+    border-radius: 50%; /* Forme ronde */
+    z-index: 2; /* Devant le contenu */
+    transition: all 1s ease; /* Animation fluide */
+  }
+  
+  .logo {
+    width: 95%; /* Taille du logo */
+    height: 100%; /* Hauteur complète */
+    object-fit: cover; /* Couvre sans déformer */
+    border-radius: 50%; /* Forme ronde */
+    transition: all 0.3s ease; /* Animation fluide */
+  }
+  
+  .logo-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Assombrit au survol */
+    transform: translate(-50%, -50%) scale(1.05); /* Zoom léger */
+    box-shadow: 0 0 30px rgb(255, 255, 255); /* Lueur blanche */
+  }
+  
+  /* --------- BOUTONS RAYONNANTS : Conteneur général --------- */
+  .button-container {
+    position: relative; /* Position de référence */
+    width: 500px; /* Largeur de la zone des boutons */
+    height: 500px; /* Hauteur de la zone */
+    margin-bottom: 30px; /* Espacement en bas */
+  }
+  
+  /* --------- BOUTONS INDIVIDUELS : Styles de base --------- */
+  .radial-btn {
+    position: absolute; /* Position dans le cercle */
+    transform: translate(-50%, -50%); /* Centre chaque bouton sur ses coordonnées */
+    background-color: rgba(130, 130, 130, 0.8); /* Fond gris semi-transparent */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 10px 18px; /* Espacement interne */
+    font-size: 18px; /* Taille du texte */
+    border-radius: 40px; /* Coins arrondis */
+    cursor: pointer; /* Curseur main au survol */
+    text-decoration: none; /* Supprime soulignement */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animations fluides */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3); /* Glow initial léger */
+  }
+  
+  /* --------- EFFET AU SURVOL : Glow plus fort --------- */
+  .radial-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Assombrit au survol */
+    box-shadow:
+      0 0 15px #fff, /* Glow plus intense */
+      0 0 25px #fff, /* Extension du halo */
+      0 0 35px #fff; /* Halo large */
+    /* Pas de scale ici : les boutons ne bougent pas */
+  }
+  
+  /* --------- POSITION DES BOUTONS AUTOUR DU LOGO --------- */
+  .btn1 { top: -5%; left: 12%; font-size: 25px; width: 226px; } /* En haut à gauche */
+  .btn2 { top: 20%; left: 125%; font-size: 25px; width: 226px; } /* Milieu droit haut */
+  .btn3 { top: 80%; left: 125%; font-size: 25px; width: 226px; } /* Milieu droit bas */
+  .btn4 { top: 105%; left: 12%; font-size: 25px; width: 226px; } /* En bas gauche */
+  .btn5 { top: 80%; left: -30%; font-size: 25px; width: 226px; } /* En bas très à gauche */
+  .btn6 { top: 20%; left: -30%; font-size: 25px; width: 226px; } /* En haut très à gauche */
+  .btn7 { top: 105%; left: 80%; font-size: 25px; width: 226px; } /* En bas à droite */
+  .btn8 { top: -5%; left: 80%; font-size: 25px; width: 226px; } /* En haut à droite */
