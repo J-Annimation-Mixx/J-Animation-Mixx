@@ -108,3 +108,46 @@ body {
   .btn6 { top: 20%; left: -30%; font-size: 25px; width: 226px; } /* En haut très à gauche */
   .btn7 { top: 105%; left: 80%; font-size: 25px; width: 226px; } /* En bas à droite */
   .btn8 { top: -5%; left: 80%; font-size: 25px; width: 226px; } /* En haut à droite */
+
+  @media screen and (max-width: 768px) {
+    /* Adapter la hauteur pour que le contenu tienne bien */
+    body {
+      background-size: cover;
+      background-position: center;
+      overflow-y: auto; /* Permet le scroll si besoin */
+    }
+  
+    .logo-wrapper {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 30px auto;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  
+    .button-container {
+      position: static;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  
+    .radial-btn {
+      position: static;
+      transform: none;
+      width: 80%;
+      max-width: 300px;
+      font-size: 18px;
+      padding: 12px;
+    }
+  
+    .btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn8 {
+      top: auto;
+      left: auto;
+    }
+  }
