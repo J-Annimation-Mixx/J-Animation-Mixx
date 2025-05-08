@@ -127,3 +127,53 @@ body > * {
     padding: 20px;
     font-size: 20px;
 }
+
+/* --------- ADAPTATION MOBILE --------- */
+@media screen and (max-width: 768px) {
+  
+  .top-banner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content {
+    margin: 100px 20px 20px 20px; /* marges réduites */
+  }
+
+  .content h3 {
+    font-size: 20px;
+    margin-top: 100px;
+    padding: 15px;
+  }
+
+  .contenu {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .texte {
+    width: 90%;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .JS {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .back-button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+}
